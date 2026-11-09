@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Screen OCR & Force Copy",
+  "version": "1.0",
+  "description": "Capture protected screen area, extract Bengali/English text and force-copy. Developed by Md Asraful Alam.",
+  "author": "Md Asraful Alam",
+  "homepage_url": "https://asraful-portfolio-jet.vercel.app/",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "offscreen",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://api.ocr.space/*"
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "trigger_ocr": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Alt+S"
+      },
+      "description": "Trigger OCR Area Selection"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+#sf-ocr-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2147483647;
+  cursor: crosshair;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#sf-ocr-box {
+  position: absolute;
+  border: 2px dashed #0284c7;
+  background: rgba(2, 132, 199, 0.15);
+  display: none;
+  pointer-events: none;
+}
+
+#sf-ocr-toast {
+  visibility: hidden;
+  min-width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 16px;
+  position: fixed;
+  z-index: 2147483647;
+  right: 20px;
+  bottom: 20px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#sf-ocr-toast.sf-show {
+  visibility: visible;
+}
+#sf-ocr-toast.success { background-color: #16a34a; }
+#sf-ocr-toast.info { background-color: #0284c7; }
+#sf-ocr-toast.error { background-color: #dc2626; }
+
+#sf-ocr-result-modal {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 2147483647;
+  padding: 12px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #e2e8f0;
+}
+
+#sf-ocr-result-modal .sf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  color: #16a34a;
+  margin-bottom: 8px;
+}
+
+#sf-ocr-result-modal textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 6px;
+  font-size: 13px;
+  resize: vertical;
+  color: #1e293b;
+}
+
+#sf-close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+#sf-manual-copy-btn {
+  width: 100%;
+  margin-top: 8px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* ডেভেলপার ব্র্যান্ডিং ফুটার */
+.sf-dev-badge {
+  margin-top: 10px;
+  padding-top: 6px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 11px;
+  color: #64748b;
+  text-align: center;
+}
+
+.sf-dev-badge a {
+  color: #0284c7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sf-dev-badge a:hover {
+  text-decoration: underline;
+}

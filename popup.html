@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 250px;
+      font-family: Arial, sans-serif;
+      padding: 14px;
+      margin: 0;
+      background: #f8fafc;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      justify-content: center;
+    }
+    button {
+      width: 100%;
+      background: #0284c7;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #0369a1;
+    }
+    .hint {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #64748b;
+      text-align: center;
+    }
+    .branding {
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px solid #e2e8f0;
+      text-align: center;
+      font-size: 11px;
+      color: #64748b;
+    }
+    .branding a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .branding a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h3>✂️ Screen OCR Copy & Paste</h3>
+
+  <button id="btnCapture">📷 Select Area & Copy</button>
+  <div class="hint">Shortcut: Press <b>Alt + S</b></div>
+
+  <div class="branding">
+    Developed by <br>
+    <a href="https://asraful-portfolio-jet.vercel.app/" target="_blank">Md Asraful Alam ↗</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
